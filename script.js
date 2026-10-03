@@ -1,17 +1,18 @@
 const levels=[
  {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"LordVaderCraft",points:100},
- {id:"cataclysm",rank:2,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:95},
- {id:"mizureta",rank:3,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:90}
+ {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
+ {id:"cataclysm",rank:3,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:90},
+ {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:85}
 ];
 
 const players=[
  {name:"Pauly",beaten:1,hardest:"Mizureta"},
- {name:"Friend 1",beaten:2,hardest:"Sakupen Hell"}
+ {name:"Jacob",beaten:2,hardest:"Sakupen Hell"}
 ];
 
 const records=[
- {player:"Friend 1",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Friend 1",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
 ];
 
