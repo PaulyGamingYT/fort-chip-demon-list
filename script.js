@@ -1,24 +1,18 @@
 const levels=[
- {id:"society",rank:1,name:"Society",difficulty:"Extreme Demon",creator:"Unknown",points:100},
- {id:"vehemence",rank:2,name:"Vehemence",difficulty:"Extreme Demon",creator:"Unknown",points:95},
- {id:"wasureta",rank:3,name:"Wasureta",difficulty:"Extreme Demon",creator:"Unknown",points:90},
- {id:"slaughterhouse",rank:4,name:"Slaughterhouse",difficulty:"Extreme Demon",creator:"Unknown",points:85},
- {id:"kowareta",rank:5,name:"Kowareta",difficulty:"Extreme Demon",creator:"Unknown",points:80},
- {id:"hakaitsu",rank:6,name:"Hakaitsu",difficulty:"Insane Demon",creator:"Unknown",points:70}
+ {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"LordVaderCraft",points:100},
+ {id:"cataclysm",rank:2,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:95},
+ {id:"mizureta",rank:3,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:90}
 ];
 
 const players=[
- {name:"Pauly",beaten:0,hardest:"—"},
- {name:"Friend 1",beaten:0,hardest:"—"},
- {name:"Friend 2",beaten:0,hardest:"—"}
+ {name:"Pauly",beaten:1,hardest:"Mizureta"},
+ {name:"Friend 1",beaten:2,hardest:"Sakupen Hell"}
 ];
 
 const records=[
- {player:"Pauly",level:"Society",progress:"67%",type:"run",run:"30–67%",attempts:"8,421"},
- {player:"Pauly",level:"Wasureta",progress:"57%",type:"run",run:"32–57%",attempts:"5,000+"},
- {player:"Pauly",level:"Slaughterhouse",progress:"43%",type:"run",run:"25–43%",attempts:"10,000+"},
- {player:"Friend 1",level:"Kowareta",progress:"100%",type:"completion",run:"0–100%",attempts:"7,231"},
- {player:"Friend 2",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"2,843"}
+ {player:"Friend 1",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Friend 1",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
 ];
 
 function renderLevels(list=levels){
