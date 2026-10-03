@@ -1,8 +1,8 @@
 const levels=[
- {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"LordVaderCraft",points:100},
+ {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"Noobas",points:100},
  {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
  {id:"cataclysm",rank:3,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:90},
- {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:85}
+ {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"dutchiee",points:85}
 ];
 
 const players=[
