@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fort Chip Demon List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">FORT CHIP <span>DEMON LIST</span></div>
+  <nav>
+    <a href="#levels">Levels</a>
+    <a href="#players">Players</a>
+    <a href="#records">Records</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">FORT CHIP COMMUNITY LIST</p>
+    <h1>Records. Runs. Completions.</h1>
+    <p>Track your friends' hardest Geometry Dash levels, best runs, percentages and attempts.</p>
+    <div class="hero-buttons">
+      <a class="button" href="#records">View Records</a>
+      <a class="button secondary" href="#players">Players</a>
+    </div>
+  </section>
+
+  <section id="levels">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">LEVEL DATABASE</p>
+        <h2>Levels</h2>
+      </div>
+      <input id="levelSearch" placeholder="Search levels...">
+    </div>
+    <div id="levelList" class="level-grid"></div>
+  </section>
+
+  <section id="players">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">PLAYER PROFILES</p>
+        <h2>Players</h2>
+      </div>
+    </div>
+    <div id="playerList" class="player-grid"></div>
+  </section>
+
+  <section id="records">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">SUBMITTED PROGRESS</p>
+        <h2>Records & Runs</h2>
+      </div>
+      <select id="recordFilter">
+        <option value="all">All records</option>
+        <option value="completion">Completions</option>
+        <option value="run">Runs</option>
+      </select>
+    </div>
+    <div id="recordList" class="record-list"></div>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">ABOUT</p>
+    <h2>A private demon list for Fort Chip.</h2>
+    <p>Use completions for levels actually beaten and runs for partial progress such as 30–67% or 40–100%. The site keeps those records separate so progress is easy to understand.</p>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModal" class="close">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<footer>Fort Chip Demon List • Community project • Geometry Dash</footer>
+<script src="script.js"></script>
+</body>
+</html>
