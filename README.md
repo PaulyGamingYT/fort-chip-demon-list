@@ -1,4 +1,4 @@
-# Fort Chip Demon List v3
+# Fort Chip Demon List
 
 Starting list:
 1. Sakupen Hell — Friend 1 completion
