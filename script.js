@@ -1,3 +1,12 @@
+let DATA = {};
+
+async function loadData() {
+  const res = await fetch("data/data.json");
+  DATA = await res.json();
+
+  processData();
+}
+
 const mainLevels=[
  {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"Noobas",points:100},
  {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
