@@ -1,49 +1,95 @@
-<div class="layout">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fort Chip Demon List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">FORT CHIP <span>DEMON LIST</span></div>
+  <nav>
+    <a href="#levels">Main List</a>
+    <a href="#extended">Extended</a>
+    <a href="#players">Players</a>
+    <a href="#records">Records</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-  <!-- LEFT SIDE -->
-  <div class="left-column">
+<main>
+  <section class="hero">
+    <p class="eyebrow">FORT CHIP COMMUNITY LIST</p>
+    <h1>Records. Runs. Completions.</h1>
+    <p>Track your friends' hardest Geometry Dash levels, best runs, percentages and attempts.</p>
+    <div class="hero-buttons">
+      <a class="button" href="#records">View Records</a>
+      <a class="button secondary" href="#players">Players</a>
+    </div>
+  </section>
 
-    <!-- MAIN LIST -->
-    <section id="levels">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">MAIN LIST</p>
-          <h2>Extreme Demons</h2>
-        </div>
-        <input id="mainSearch" placeholder="Search levels...">
+  <section id="levels">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">MAIN LIST</p>
+        <h2>Extreme Demons</h2>
       </div>
+      <input id="mainSearch" placeholder="Search levels...">
+    </div>
+    <div id="mainLevelList" class="level-grid"></div>
+  </section>
 
-      <div id="mainLevelList" class="level-grid"></div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- EXTENDED LIST -->
-    <section id="extended">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">EXTENDED LIST</p>
-          <h2>Insane Demons & Below</h2>
-        </div>
+  <section id="extended">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">EXTENDED LIST</p>
+        <h2>Insane Demons & Below</h2>
       </div>
+    </div>
+    <div id="extendedLevelList" class="level-grid"></div>
+  </section>
 
-      <div id="extendedLevelList" class="level-grid"></div>
-    </section>
+  <section id="players">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">PLAYER PROFILES</p>
+        <h2>Players</h2>
+      </div>
+    </div>
+    <div id="playerList" class="player-grid"></div>
+  </section>
 
+  <section id="records">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">SUBMITTED PROGRESS</p>
+        <h2>Records & Runs</h2>
+      </div>
+      <select id="recordFilter">
+        <option value="all">All records</option>
+        <option value="completion">Completions</option>
+        <option value="run">Runs</option>
+      </select>
+    </div>
+    <div id="recordList" class="record-list"></div>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">ABOUT</p>
+    <h2>A private demon list for Fort Chip.</h2>
+    <p>The Main List tracks Extreme Demons. The Extended List tracks Insane Demons and below. A level can be added when someone in Fort Chip beats it or has a notable run. Completions and partial runs stay separate.</p>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModal" class="close">×</button>
+    <div id="modalContent"></div>
   </div>
-
-  <!-- RIGHT SIDE -->
-  <div class="right-column">
-    <section id="players">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">PLAYER PROFILES</p>
-          <h2>Players</h2>
-        </div>
-      </div>
-
-      <div id="playerList" class="player-grid"></div>
-    </section>
-  </div>
-
 </div>
+
+<footer>Fort Chip Demon List • Community project • Geometry Dash</footer>
+<script src="script.js"></script>
+</body>
+</html>
