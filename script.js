@@ -216,6 +216,8 @@ loadData();
 document.getElementById("submitForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
+  const isNewLevel = document.getElementById("isNewLevel")?.checked;
+
   const record = {
     player: document.getElementById("player").value,
     level: document.getElementById("level").value,
@@ -226,7 +228,24 @@ document.getElementById("submitForm").addEventListener("submit", function(e) {
 
   const output = document.getElementById("submitOutput");
 
-  output.textContent = "Copy this and paste into your data.json ↓";
+  if (isNewLevel) {
+    const newLevel = {
+      name: document.getElementById("level").value,
+      creator: document.getElementById("creator").value,
+      difficulty: document.getElementById("difficulty").value,
+      thumbnail: "images/levels/default.png"
+    };
 
-  output.innerHTML += `<pre>${JSON.stringify(record, null, 2)}</pre>`;
+    output.innerHTML = `
+      <p><strong>NEW LEVEL (add to "levels"):</strong></p>
+      <pre>${JSON.stringify(newLevel, null, 2)}</pre>
+      <p><strong>RECORD (add to "records"):</strong></p>
+      <pre>${JSON.stringify(record, null, 2)}</pre>
+    `;
+  } else {
+    output.innerHTML = `
+      <p><strong>Copy this into "records":</strong></p>
+      <pre>${JSON.stringify(record, null, 2)}</pre>
+    `;
+  }
 });
