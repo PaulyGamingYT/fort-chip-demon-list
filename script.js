@@ -6,7 +6,12 @@ const mainLevels=[
 ];
 
 const extendedLevels=[
- {id:"clubstep",rank:1,name:"Clubstep",difficulty:"Easy Demon",creator:"RobTop",points:50}
+ {id:"hakaitsu",rank:1,name:"Hakaitsu",difficulty:"Insane Demon",creator:"ImNotCriko",points:50},
+ {id:"magmabound",rank:2,name:"Magma Bound",difficulty:"Insane Demon",creator:"ScorchVx",points:45},
+ {id:"crazyii",rank:3,name:"CraZy II",difficulty:"Insane Demon",creator:"Davjt",points:40},
+ {id:"thermodynamix",rank:4,name:"ThermoDynamix",difficulty:"Hard Demon",creator:"Flash",points:35},
+ {id:"crazy",rank:5,name:"CraZy",difficulty:"Hard Demon",creator:"Davjt",points:30},
+ {id:"clubstep",rank:6,name:"Clubstep",difficulty:"Easy Demon",creator:"RobTop",points:25}
 ];
 
 const players=[
@@ -20,8 +25,17 @@ const players=[
 const records=[
  {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Jacob",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"CraZyII",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"CraZy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
+ {player:"London",level:"CraZyII",progress:"100%",type:"run",run:"0–100%",attempts:"—"},
+ {player:"London",level:"CraZy",progress:"100%",type:"run",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"CraZyII",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"CraZy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"—"},
  {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Ethan.t",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
