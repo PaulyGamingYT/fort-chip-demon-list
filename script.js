@@ -57,50 +57,7 @@ function calculatePoints(rank) {
   renderRecords(DATA.records);
 }
 
-const mainLevels=[
- {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"Noobas",points:100},
- {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
- {id:"cataclysm",rank:3,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:90},
- {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"Dutchie",points:85}
-];
 
-const extendedLevels=[
- {id:"hakaitsu",rank:1,name:"Hakaitsu",difficulty:"Insane Demon",creator:"ImNotCriko",points:50},
- {id:"magmabound",rank:2,name:"Magma Bound",difficulty:"Insane Demon",creator:"ScorchVx",points:45},
- {id:"crazyii",rank:3,name:"Crazy II",difficulty:"Insane Demon",creator:"DavJT",points:40},
- {id:"thermodynamix",rank:4,name:"ThermoDynamix",difficulty:"Hard Demon",creator:"Flash",points:35},
- {id:"crazy",rank:5,name:"Crazy",difficulty:"Hard Demon",creator:"DavJT",points:30},
- {id:"clubstep",rank:6,name:"Clubstep",difficulty:"Easy Demon",creator:"RobTop",points:25}
-];
-
-const players=[
- {name:"Pauly"},
- {name:"Jacob"},
- {name:"London"},
- {name:"Ethan.p"},
- {name:"Ethan.t"}
-];
-
-const records=[
- {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"100000"},
- {player:"Jacob",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"ThermoDynamix",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
- {player:"London",level:"Rauchkammer",progress:"60%",type:"run",run:"0–60%",attempts:"—"},
- {player:"London",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"2000"},
- {player:"London",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"853"},
- {player:"London",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"651"},
- {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"3000"},
- {player:"Pauly",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"2500"},
- {player:"Pauly",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"670"},
- {player:"Pauly",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"2500"},
- {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"5000"},
- {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Ethan.t",level:"None",progress:"0%",type:"run",run:"0–0%",attempts:"—"}
 ];
 
 function allLevels(){return [...mainLevels,...extendedLevels];}
