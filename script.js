@@ -48,7 +48,10 @@ function processData() {
   });
 
   const playerList = Object.values(players).sort((a, b) => b.points - a.points);
-
+function calculatePoints(rank) {
+  if (rank === 1) return 100;
+  return Math.max(5, 100 - rank * 5);
+}
   renderLevels(levels);
   renderPlayers(playerList);
   renderRecords(DATA.records);
