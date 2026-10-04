@@ -77,7 +77,31 @@
 
   </div>
   <!-- END LAYOUT -->
+<section id="submit">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">SUBMIT</p>
+      <h2>Submit a Record</h2>
+    </div>
+  </div>
 
+  <form id="submitForm" class="submit-form">
+    <input type="text" id="player" placeholder="Player Name" required>
+    <input type="text" id="level" placeholder="Level Name" required>
+
+    <select id="type">
+      <option value="completion">Completion</option>
+      <option value="run">Run</option>
+    </select>
+
+    <input type="number" id="percent" placeholder="Percent (e.g. 100)">
+    <input type="number" id="attempts" placeholder="Attempts">
+
+    <button type="submit">Submit Record</button>
+  </form>
+
+  <p id="submitOutput"></p>
+</section>
   <!-- KEEP THESE FULL WIDTH -->
   <section id="records">
     <div class="section-heading">
