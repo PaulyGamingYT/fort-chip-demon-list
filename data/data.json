@@ -11,6 +11,54 @@
       "creator": "Riot",
       "difficulty": "Extreme Demon",
       "thumbnail": "images/levels/bloodbath.png"
+    },
+    {
+      "name": "Cataclysm",
+      "creator": "Ggboy",
+      "difficulty": "Extreme Demon",
+      "thumbnail": "images/levels/cataclysm.png"
+    },
+    {
+      "name": "Mizureta",
+      "creator": "Dutchie",
+      "difficulty": "Extreme Demon",
+      "thumbnail": "images/levels/mizureta.png"
+    },
+    {
+      "name": "Hakaiitsu",
+      "creator": "ImNotCriko",
+      "difficulty": "Insane Demon",
+      "thumbnail": "images/levels/hakaiitsu.png"
+    },
+    {
+      "name": "Magma Bound",
+      "creator": "ScorchVx",
+      "difficulty": "Insane Demon",
+      "thumbnail": "images/levels/magma_bound.png"
+    },
+    {
+      "name": "Crazy II",
+      "creator": "DavJT",
+      "difficulty": "Insane Demon",
+      "thumbnail": "images/levels/crazy2.png"
+    },
+    {
+      "name": "ThermoDynamix",
+      "creator": "Flash",
+      "difficulty": "Hard Demon",
+      "thumbnail": "images/levels/thermodynamix.png"
+    },
+    {
+      "name": "Crazy",
+      "creator": "DavJT",
+      "difficulty": "Hard Demon",
+      "thumbnail": "images/levels/crazy.png"
+    },
+    {
+      "name": "Clubstep",
+      "creator": "RobTop",
+      "difficulty": "Easy Demon",
+      "thumbnail": "images/levels/clubstep.png"
     }
   ],
 
@@ -21,24 +69,27 @@
       "type": "completion",
       "percent": 100,
       "attempts": 100000
+    },
+    {
+      "player": "Jacob",
+      "level": "Bloodbath",
+      "type": "completion",
+      "percent": 100,
+      "attempts": 0
+    },
+    {
+      "player": "London",
+      "level": "Magma Bound",
+      "type": "completion",
+      "percent": 100,
+      "attempts": 2000
+    },
+    {
+      "player": "Pauly",
+      "level": "Mizureta",
+      "type": "completion",
+      "percent": 100,
+      "attempts": 3000
     }
   ]
 }
-"levels": [
-  { "name": "Sakupen Hell", ... },
-  { "name": "Bloodbath", ... },
-  { "name": "Cataclysm", ... },
-  { "name": "Mizureta", ... },
-  { "name": "Hakaiitsu", ... },
-  { "name": "Magma Bound", ... },
-  { "name": "Crazy II", ... },
-  { "name": "ThermoDynamix", ... },
-  { "name": "Crazy", ... },
-  { "name": "Clubstep", ... }
-]
-"records": [
-  { "player": "Jacob", "level": "Sakupen Hell", "type": "completion", "percent": 100, "attempts": 100000 },
-  { "player": "Jacob", "level": "Bloodbath", "type": "completion", "percent": 100, "attempts": 0 },
-  { "player": "London", "level": "Magma Bound", "type": "completion", "percent": 100, "attempts": 2000 },
-  { "player": "Pauly", "level": "Mizureta", "type": "completion", "percent": 100, "attempts": 3000 }
-]
