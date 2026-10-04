@@ -1,29 +1,30 @@
 const mainLevels=[
  {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"LordVaderCraft",points:100},
- {id:"cataclysm",rank:2,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:95},
- {id:"mizureta",rank:3,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:90},
- {id:"bloodbath",rank:4,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:85}
+ {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
+ {id:"cataclysm",rank:3,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:90},
+ {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"Rustam",points:85}
 ];
 
 const extendedLevels=[
- {id:"clubstep",rank:1,name:"Clubstep",difficulty:"Insane Demon",creator:"RobTop",points:50}
+ {id:"clubstep",rank:1,name:"Clubstep",difficulty:"Easy Demon",creator:"RobTop",points:50}
 ];
 
 const players=[
  {name:"Pauly"},
- {name:"Jacob London"},
+ {name:"Jacob"},
+ {name:"London"},
  {name:"Ethan.p"},
  {name:"Ethan.t"}
 ];
 
 const records=[
- {player:"Jacob London",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob London",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
  {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"—"},
  {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Ethan.t",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
- {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"—"}
+ {player:"Ethan.t",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
 ];
 
 function allLevels(){return [...mainLevels,...extendedLevels];}
