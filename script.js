@@ -213,3 +213,20 @@ renderList(extendedLevels,"extendedLevelList");
 renderPlayers();
 renderRecords();
 loadData();
+document.getElementById("submitForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const record = {
+    player: document.getElementById("player").value,
+    level: document.getElementById("level").value,
+    type: document.getElementById("type").value,
+    percent: Number(document.getElementById("percent").value) || 0,
+    attempts: Number(document.getElementById("attempts").value) || 0
+  };
+
+  const output = document.getElementById("submitOutput");
+
+  output.textContent = "Copy this and paste into your data.json ↓";
+
+  output.innerHTML += `<pre>${JSON.stringify(record, null, 2)}</pre>`;
+});
