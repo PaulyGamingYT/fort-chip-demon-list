@@ -25,7 +25,7 @@
       "thumbnail": "images/levels/mizureta.png"
     },
     {
-      "name": "Hakaiitsu",
+      "name": "Hakaitsu",
       "creator": "ImNotCriko",
       "difficulty": "Insane Demon",
       "thumbnail": "images/levels/hakaiitsu.png"
@@ -69,13 +69,7 @@
       "type": "completion",
       "percent": 100,
       "attempts": 100000
-    },
-    {
-      "player": "Jacob",
-      "level": "Bloodbath",
-      "type": "completion",
-      "percent": 100,
-      "attempts": 0
+  
     },
     {
       "player": "London",
