@@ -31,16 +31,16 @@ const records=[
  {player:"Jacob",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Jacob",level:"ThermoDynamix",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
- {player:"London",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"London",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"London",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"—"},
+ {player:"London",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"2000"},
+ {player:"London",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"853"},
+ {player:"London",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"651"},
+ {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"3000"},
+ {player:"Pauly",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"2500"},
+ {player:"Pauly",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"670"},
+ {player:"Pauly",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"2500"},
+ {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"5000"},
  {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Ethan.t",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
+ {player:"Ethan.t",level:"Clubstep",progress:"0%",type:"run",run:"0–0%",attempts:"—"}
 ];
 
 function allLevels(){return [...mainLevels,...extendedLevels];}
