@@ -1,0 +1,26 @@
+{
+  "levels": [
+    {
+      "name": "Sakupen Hell",
+      "creator": "Noobas",
+      "difficulty": "Extreme Demon",
+      "thumbnail": "images/levels/sakupen_hell.png"
+    },
+    {
+      "name": "Bloodbath",
+      "creator": "Riot",
+      "difficulty": "Extreme Demon",
+      "thumbnail": "images/levels/bloodbath.png"
+    }
+  ],
+
+  "records": [
+    {
+      "player": "Jacob",
+      "level": "Sakupen Hell",
+      "type": "completion",
+      "percent": 100,
+      "attempts": 100000
+    }
+  ]
+}
