@@ -2,15 +2,15 @@ const mainLevels=[
  {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"Noobas",points:100},
  {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
  {id:"cataclysm",rank:3,name:"Cataclysm",difficulty:"Extreme Demon",creator:"Ggb0y",points:90},
- {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"dutchiee",points:85}
+ {id:"mizureta",rank:4,name:"Mizureta",difficulty:"Extreme Demon",creator:"Dutchie",points:85}
 ];
 
 const extendedLevels=[
  {id:"hakaitsu",rank:1,name:"Hakaitsu",difficulty:"Insane Demon",creator:"ImNotCriko",points:50},
  {id:"magmabound",rank:2,name:"Magma Bound",difficulty:"Insane Demon",creator:"ScorchVx",points:45},
- {id:"crazyii",rank:3,name:"CraZy II",difficulty:"Insane Demon",creator:"Davjt",points:40},
+ {id:"crazyii",rank:3,name:"Crazy II",difficulty:"Insane Demon",creator:"DavJT",points:40},
  {id:"thermodynamix",rank:4,name:"ThermoDynamix",difficulty:"Hard Demon",creator:"Flash",points:35},
- {id:"crazy",rank:5,name:"CraZy",difficulty:"Hard Demon",creator:"Davjt",points:30},
+ {id:"crazy",rank:5,name:"Crazy",difficulty:"Hard Demon",creator:"DavJT",points:30},
  {id:"clubstep",rank:6,name:"Clubstep",difficulty:"Easy Demon",creator:"RobTop",points:25}
 ];
 
@@ -23,31 +23,56 @@ const players=[
 ];
 
 const records=[
- {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Sakupen Hell",progress:"100%",type:"completion",run:"0–100%",attempts:"100000"},
  {player:"Jacob",level:"Cataclysm",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Jacob",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"CraZyII",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Jacob",level:"CraZy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Jacob",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Jacob",level:"ThermoDynamix",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
- {player:"London",level:"CraZyII",progress:"100%",type:"run",run:"0–100%",attempts:"—"},
- {player:"London",level:"CraZy",progress:"100%",type:"run",run:"0–100%",attempts:"—"},
+ {player:"London",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"London",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"London",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Mizureta",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Hakaitsu",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"CraZyII",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Pauly",level:"CraZy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
+ {player:"Pauly",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"—"},
  {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Ethan.t",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"}
 ];
 
 function allLevels(){return [...mainLevels,...extendedLevels];}
+function findLevel(name){return allLevels().find(l=>l.name.toLowerCase()===name.toLowerCase());}
 function completedBy(name){return records.filter(r=>r.player===name&&r.type==="completion");}
+function runsBy(name){return records.filter(r=>r.player===name&&r.type==="run");}
+function pointsForRecord(record){
+ const level=findLevel(record.level);
+ return record.type==="completion" && level ? level.points : 0;
+}
+function totalPoints(name){return completedBy(name).reduce((sum,r)=>sum+pointsForRecord(r),0);}
+function hardestRecord(name){
+ const completed=completedBy(name).filter(r=>findLevel(r.level));
+ if(!completed.length)return null;
+ return completed.reduce((hardest,current)=>{
+   const a=findLevel(hardest.level), b=findLevel(current.level);
+   if(b.points>a.points)return current;
+   if(b.points===a.points && b.rank<a.rank)return current;
+   return hardest;
+ });
+}
 function bestHardest(name){
- const rs=completedBy(name);
- if(!rs.length)return "No completions yet";
- const order=[...mainLevels,...extendedLevels];
- return rs.sort((a,b)=>order.findIndex(l=>l.name===a.level)-order.findIndex(l=>l.name===b.level))[0].level;
+ const record=hardestRecord(name);
+ return record ? record.level : "No completions yet";
+}
+
+function playerRanking(){
+ return [...players].sort((a,b)=>{
+   const pointsDiff=totalPoints(b.name)-totalPoints(a.name);
+   if(pointsDiff!==0)return pointsDiff;
+   return completedBy(b.name).length-completedBy(a.name).length;
+ });
 }
 
 function renderList(list,elementId){
@@ -63,13 +88,17 @@ function renderList(list,elementId){
 }
 
 function renderPlayers(){
- document.getElementById("playerList").innerHTML=players.map(p=>{
+ const ranked=playerRanking();
+ document.getElementById("playerList").innerHTML=ranked.map((p,index)=>{
    const completed=completedBy(p.name);
-   const runs=records.filter(r=>r.player===p.name&&r.type==="run");
+   const runs=runsBy(p.name);
+   const hardest=bestHardest(p.name);
    return `<article class="card" onclick="showPlayer('${p.name}')">
+    <div class="level-rank">#${index+1}</div>
     <div class="player-name">${p.name}</div>
+    <div class="player-score">${totalPoints(p.name)} pts</div>
     <div class="player-meta">${completed.length} completion${completed.length===1?"":"s"} • ${runs.length} run${runs.length===1?"":"s"}</div>
-    <div class="hardest"><div class="player-meta">Hardest beaten</div><strong>${bestHardest(p.name)}</strong></div>
+    <div class="hardest"><div class="player-meta">Hardest beaten</div><strong>${hardest}</strong></div>
    </article>`;
  }).join("");
 }
@@ -99,9 +128,12 @@ function showLevel(id){
 
 function showPlayer(name){
  const rs=records.filter(r=>r.player===name);
+ const completed=completedBy(name);
+ const runs=runsBy(name);
+ const ranking=playerRanking().findIndex(p=>p.name===name)+1;
  document.getElementById("modalContent").innerHTML=`
  <p class="eyebrow">PLAYER PROFILE</p><h2>${name}</h2>
- <p>${completedBy(name).length} completions • ${rs.filter(r=>r.type==="run").length} partial runs</p>
+ <p><strong>#${ranking}</strong> • <strong>${totalPoints(name)} points</strong> • ${completed.length} completions • ${runs.length} partial runs</p>
  <h3>Records</h3>
  ${rs.length?rs.map(r=>`<div class="run-line"><span><strong>${r.level}</strong> — ${r.type}</span><span>${r.run} • ${r.attempts}</span></div>`).join(""):"<p>No records submitted yet.</p>"}`;
  document.getElementById("modal").classList.remove("hidden");
