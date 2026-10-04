@@ -24,3 +24,21 @@
     }
   ]
 }
+"levels": [
+  { "name": "Sakupen Hell", ... },
+  { "name": "Bloodbath", ... },
+  { "name": "Cataclysm", ... },
+  { "name": "Mizureta", ... },
+  { "name": "Hakaiitsu", ... },
+  { "name": "Magma Bound", ... },
+  { "name": "Crazy II", ... },
+  { "name": "ThermoDynamix", ... },
+  { "name": "Crazy", ... },
+  { "name": "Clubstep", ... }
+]
+"records": [
+  { "player": "Jacob", "level": "Sakupen Hell", "type": "completion", "percent": 100, "attempts": 100000 },
+  { "player": "Jacob", "level": "Bloodbath", "type": "completion", "percent": 100, "attempts": 0 },
+  { "player": "London", "level": "Magma Bound", "type": "completion", "percent": 100, "attempts": 2000 },
+  { "player": "Pauly", "level": "Mizureta", "type": "completion", "percent": 100, "attempts": 3000 }
+]
