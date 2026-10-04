@@ -212,3 +212,4 @@ renderList(mainLevels,"mainLevelList");
 renderList(extendedLevels,"extendedLevelList");
 renderPlayers();
 renderRecords();
+loadData();
