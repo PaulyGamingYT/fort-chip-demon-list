@@ -1,9 +1,26 @@
-# Fort Chip Demon List
+# Fort Chip Demon List v4
 
-Starting list:
-1. Sakupen Hell - 1 completion
-2. Bloodbath - 1 completion
-3. Cataclysm - 1 completion
-4. Mizureta - 1 completion
+A small Geometry Dash community demon list for Fort Chip.
 
-Add future levels to the `levels` array in `script.js`, then add the relevant completion/run to the `records` array.
+## Current structure
+- Main List: Extreme Demons
+- Extended List: Insane Demons and below
+- Players: Pauly, Jacob London, Ethan.p, Ethan.t
+- Records: completions and partial runs
+
+## Current records
+### Main List
+- Jacob London — Sakupen Hell — 100%
+- Jacob London — Cataclysm — 100%
+- Pauly — Mizureta — 100%
+- Ethan.p — Bloodbath — 100%
+- Jacob London — Cataclysm — 0–62%
+- Pauly — Wasureta — 32–58%
+
+### Extended List
+- Ethan.t — Clubstep — 100%
+
+## How to add another level
+Open `script.js` and add the level to either `mainLevels` or `extendedLevels`, then add the player's record to `records`.
+
+The website automatically renders the cards, records, and player profiles from that data.
