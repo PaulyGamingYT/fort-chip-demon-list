@@ -10,7 +10,7 @@
       "creator": "Noobas",
       "difficulty": "Extreme Demon",
       "thumbnail": "images/levels/sakupen_hell.png"
-    },
+    
     {
       "name": "Bloodbath",
       "creator": "Riot",
@@ -74,7 +74,7 @@
   "type": "completion",
   "percent": 100,
   "attempts": 1
-    },
+    
       "player": "Jacob",
       "level": "Sakupen Hell",
       "type": "completion",
