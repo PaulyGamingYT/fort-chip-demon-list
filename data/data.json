@@ -1,16 +1,11 @@
 {
   "levels": [
     {
-  "name": "Society",
-  "creator": "Neomarbilan",
-  "difficulty": "Extreme Demon",
-  "thumbnail": "images/levels/default.png"
-    },
       "name": "Sakupen Hell",
       "creator": "Noobas",
       "difficulty": "Extreme Demon",
       "thumbnail": "images/levels/sakupen_hell.png"
-    
+    },
     {
       "name": "Bloodbath",
       "creator": "Riot",
@@ -69,12 +64,6 @@
 
   "records": [
     {
-  "player": "Pauly",
-  "level": "Society",
-  "type": "completion",
-  "percent": 100,
-  "attempts": 1
-    
       "player": "Jacob",
       "level": "Sakupen Hell",
       "type": "completion",
