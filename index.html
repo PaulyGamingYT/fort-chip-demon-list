@@ -88,7 +88,18 @@
   <form id="submitForm" class="submit-form">
     <input type="text" id="player" placeholder="Player Name" required>
     <input type="text" id="level" placeholder="Level Name" required>
+<label>
+  <input type="checkbox" id="isNewLevel">
+  This is a new level
+</label>
 
+<input type="text" id="creator" placeholder="Creator (if new level)">
+<select id="difficulty">
+  <option>Extreme Demon</option>
+  <option>Insane Demon</option>
+  <option>Hard Demon</option>
+  <option>Easy Demon</option>
+</select>
     <select id="type">
       <option value="completion">Completion</option>
       <option value="run">Run</option>
