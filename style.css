@@ -49,3 +49,26 @@ footer{text-align:center;color:#686f7f;border-top:1px solid var(--border);paddin
   border: none;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.submit-form input,
+.submit-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a1a;
+  color: white;
+}
+
+.submit-form button {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
