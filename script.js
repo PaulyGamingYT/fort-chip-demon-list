@@ -165,10 +165,7 @@ document.getElementById("recordFilter").addEventListener("change",e=>renderRecor
 document.getElementById("closeModal").onclick=()=>document.getElementById("modal").classList.add("hidden");
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.currentTarget.classList.add("hidden")});
 
-renderList(mainLevels,"mainLevelList");
-renderList(extendedLevels,"extendedLevelList");
-renderPlayers();
-renderRecords();
+// handled by processData now
 loadData();
 document.getElementById("submitForm").addEventListener("submit", function(e) {
   e.preventDefault();
