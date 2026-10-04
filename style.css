@@ -23,3 +23,29 @@ footer{text-align:center;color:#686f7f;border-top:1px solid var(--border);paddin
 @media(max-width:700px){header{padding:14px 5%}nav{gap:12px;font-size:13px}.hero{padding-top:65px}.section-heading{align-items:stretch;flex-direction:column}.record{grid-template-columns:1fr 1fr}.record .attempts{display:none}}
 
 #extended { margin-top: 4rem; }
+/* ===== FORCE 2 COLUMN LAYOUT ===== */
+.layout {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Left side */
+.left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right side (players) */
+.right-column {
+  position: sticky;
+  top: 100px;
+}
+
+/* Divider */
+.divider {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
