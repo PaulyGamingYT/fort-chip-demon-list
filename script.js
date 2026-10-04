@@ -7,6 +7,53 @@ async function loadData() {
   processData();
 }
 
+function processData() {
+  const levels = DATA.levels;
+
+  // Assign rankings + points
+  levels.forEach((level, index) => {
+    level.rank = index + 1;
+    level.points = calculatePoints(level.rank);
+  });
+
+  // Build players automatically
+  const players = {};
+
+  DATA.records.forEach(record => {
+    if (!players[record.player]) {
+      players[record.player] = {
+        name: record.player,
+        points: 0,
+        completions: 0,
+        runs: 0,
+        hardest: null
+      };
+    }
+
+    const player = players[record.player];
+    const level = levels.find(l => l.name === record.level);
+
+    if (!level) return;
+
+    if (record.type === "completion") {
+      player.points += level.points;
+      player.completions++;
+
+      if (!player.hardest || level.rank < player.hardest.rank) {
+        player.hardest = level;
+      }
+    } else {
+      player.runs++;
+    }
+  });
+
+  const playerList = Object.values(players).sort((a, b) => b.points - a.points);
+
+  renderLevels(levels);
+  renderPlayers(playerList);
+  renderRecords(DATA.records);
+}
+
 const mainLevels=[
  {id:"sakupenhell",rank:1,name:"Sakupen Hell",difficulty:"Extreme Demon",creator:"Noobas",points:100},
  {id:"bloodbath",rank:2,name:"Bloodbath",difficulty:"Extreme Demon",creator:"Riot",points:95},
