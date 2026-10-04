@@ -31,6 +31,7 @@ const records=[
  {player:"Jacob",level:"Clubstep",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"Jacob",level:"ThermoDynamix",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
  {player:"London",level:"Cataclysm",progress:"62%",type:"run",run:"0–62%",attempts:"—"},
+ {player:"London",level:"Rauchkammer",progress:"60%",type:"run",run:"0–60%",attempts:"—"},
  {player:"London",level:"Magma Bound",progress:"100%",type:"completion",run:"0–100%",attempts:"2000"},
  {player:"London",level:"Crazy II",progress:"100%",type:"completion",run:"0–100%",attempts:"853"},
  {player:"London",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"651"},
@@ -40,7 +41,7 @@ const records=[
  {player:"Pauly",level:"Crazy",progress:"100%",type:"completion",run:"0–100%",attempts:"2500"},
  {player:"Pauly",level:"Wasureta",progress:"58%",type:"run",run:"32–58%",attempts:"5000"},
  {player:"Ethan.p",level:"Bloodbath",progress:"100%",type:"completion",run:"0–100%",attempts:"—"},
- {player:"Ethan.t",level:"Clubstep",progress:"0%",type:"run",run:"0–0%",attempts:"—"}
+ {player:"Ethan.t",level:"None",progress:"0%",type:"run",run:"0–0%",attempts:"—"}
 ];
 
 function allLevels(){return [...mainLevels,...extendedLevels];}
