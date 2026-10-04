@@ -10,7 +10,7 @@ A small Geometry Dash community demon list for Fort Chip.
 
 ## Current records
 ### Main List
-- Jacob London — Sakupen Hell — 100%
+- Jacob London — Cataclysm — 100%
 - Jacob London — Cataclysm — 100%
 - Pauly — Mizureta — 100%
 - Ethan.p — Bloodbath — 100%
